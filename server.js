@@ -59,6 +59,13 @@ app.get('/bad',(request,response) => {
   })
 })
 
+app.get('/project',(request,response) => {
+  response.render('project.hbs', {
+    pageTitle: 'Projects In Pipeline',
+    currentYear: new Date().getFullYear()
+  });
+})
+
 
 app.listen(port,() => {
   console.log(`Server is listening at ${port}`);
